@@ -1,0 +1,97 @@
+page-home {
+    .login-content {
+        // background: color($colors, third);
+     
+        .logo-row {
+          padding-top: 10px;
+          padding-bottom: 20px;
+        }
+     
+        // .login-box {
+        //   background:  color($colors, third);;
+        //   padding: 20px 20px 0px 20px;
+        //   margin-top: 30px;
+        // }
+     
+        ion-row {
+           align-items: center;
+           text-align: center;
+         }
+     
+         ion-item {
+             border-radius: 30px !important;
+             padding-left: 30px !important;
+             font-size: 1em;
+             margin-bottom: 10px;
+             border: 1px solid #ffffff;
+             border-bottom: 0px !important;
+             box-shadow: none !important;
+         }
+     
+         .signup-col {
+           margin: 0px 16px 0px 16px;
+           padding-bottom: 20px;
+         }
+     
+         .item-inner {
+           border-bottom-color: #ffffff !important;
+           box-shadow: none !important;
+         }
+     
+         .submit-btn {
+            background: color($colors, secondary);
+           padding: 20px;
+           color: color($colors, dark);
+        //    border-radius: 30px !important;
+           //border: 1px solid #ffffff;
+         }
+     
+         .register-btn {
+           color: #ffffff;
+           font-size: 0.8em;
+         }
+      }
+
+      .item-md ion-icon[item-start] + .item-inner{
+          margin-left: 0px
+      }
+
+      .grey{
+          color: #9da5b3
+      }
+      .white{
+          color: #fff
+      }
+      ion-select{
+          width: 90%;
+          max-width: 100%;
+      }
+
+      .list-md[inset]{
+        margin: 0px;
+      }
+
+      .footer{
+        // left: 0;
+        // bottom: 0;
+        // position: absolute;
+        // z-index: 10;
+        // display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center
+      }
+
+      .text-footer{
+        padding: 10px;
+        text-align: center;
+      }
+
+      .item-block{
+        height: 4.0rem;
+      }
+
+      .no-margin{
+        margin: 0px !important;
+      }
+}

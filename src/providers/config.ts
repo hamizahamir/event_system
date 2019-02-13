@@ -1,0 +1,1 @@
+export let SERVER_URL = "https://www.risda.gov.my/harga_public_search/";

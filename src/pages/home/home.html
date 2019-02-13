@@ -1,0 +1,101 @@
+<ion-content class="login-content auth-page" padding>
+  <ion-row class="logo-row">
+    <ion-col col-3></ion-col>
+    <ion-col col-6>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Keretapi_Tanah_Melayu_Berhad_Logo.svg/2000px-Keretapi_Tanah_Melayu_Berhad_Logo.svg.png"
+      />
+    </ion-col>
+    <ion-col col-3></ion-col>
+  </ion-row>
+  <div class="login-box">
+    <!-- (ngSubmit)="login()" #registerForm="ngForm" -->
+    <form>
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+
+            <ion-item>
+              <ion-icon name="list" item-start class="grey"></ion-icon>
+              <ion-select interface="popover">
+                <ion-option value="" selected="true">Services</ion-option>
+                <ion-option value="nes">NES</ion-option>
+                <ion-option value="n64">Nintendo64</ion-option>
+                <ion-option value="ps">PlayStation</ion-option>
+                <ion-option value="genesis">Sega Genesis</ion-option>
+                <ion-option value="saturn">Sega Saturn</ion-option>
+                <ion-option value="snes">SNES</ion-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item>
+              <ion-icon name="ios-pin-outline" item-start class="grey"></ion-icon>
+              <ion-select interface="popover">
+                <ion-option value="" selected="true">Origin</ion-option>
+                <ion-option value="nes">NES</ion-option>
+                <ion-option value="n64">Nintendo64</ion-option>
+                <ion-option value="ps">PlayStation</ion-option>
+                <ion-option value="genesis">Sega Genesis</ion-option>
+                <ion-option value="saturn">Sega Saturn</ion-option>
+                <ion-option value="snes">SNES</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item class="no-margin">
+              <ion-icon name="ios-pin-outline" item-start class="grey"></ion-icon>
+              <ion-select interface="popover">
+                <ion-option value="" selected="true">Destination</ion-option>
+                <ion-option value="nes">NES</ion-option>
+                <ion-option value="n64">Nintendo64</ion-option>
+                <ion-option value="ps">PlayStation</ion-option>
+                <ion-option value="genesis">Sega Genesis</ion-option>
+                <ion-option value="saturn">Sega Saturn</ion-option>
+                <ion-option value="snes">SNES</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col >
+          <button ion-button round class="submit-btn no-margin" full type="button" (click)="mainPage()">
+            <ion-icon name="ios-subway" item-start style="font-size:2.3rem;margin-right:10px"></ion-icon> Search</button>
+          <!-- <button ion-button class="register-btn" block clear (click)="createAccount()">Create New Account</button> -->
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6 ><button ion-button round class="submit-btn no-margin" full type="button" (click)="mainPage()">
+            <ion-icon name="md-calendar" item-start style="font-size:2.3rem;margin-right:10px"></ion-icon> Timeline</button></ion-col>
+        <ion-col col-6><button ion-button round class="submit-btn no-margin" full type="button" (click)="mainPage()">
+            <ion-icon name="ios-information-circle-outline" item-start style="font-size:2.3rem;margin-right:10px"></ion-icon> Info</button></ion-col>
+          </ion-row>
+
+    </form>
+    <ion-row>
+        <ion-col >
+      <ion-slides pager>
+
+        <ion-slide >
+          <img src="http://www.utusan.com.my/polopoly_fs/1.791561.1542811073!/image/image.jpeg_gen/derivatives/landscape_620/image.jpeg" />
+        </ion-slide>
+
+        <ion-slide style="background-color: blue">
+          <h2>Slide 2</h2>
+        </ion-slide>
+
+        <ion-slide style="background-color: red">
+          <h2>Slide 3</h2>
+        </ion-slide>
+
+      </ion-slides>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="footer">
+    <span class="white text-footer">KTMB 2019 Version 1.0</span>
+  </div>
+  <!-- <ion-footer>
+      <ion-toolbar>
+        <ion-title>KTMB 2019 Version 1.0</ion-title>
+      </ion-toolbar>
+    </ion-footer> -->
+</ion-content>
