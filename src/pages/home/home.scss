@@ -1,60 +1,11 @@
 page-home {
-    .login-content {
-        // background: color($colors, third);
-     
-        .logo-row {
-          padding-top: 10px;
-          padding-bottom: 20px;
-        }
-     
-        // .login-box {
-        //   background:  color($colors, third);;
-        //   padding: 20px 20px 0px 20px;
-        //   margin-top: 30px;
-        // }
-     
-        ion-row {
-           align-items: center;
-           text-align: center;
-         }
-     
-         ion-item {
-             border-radius: 30px !important;
-             padding-left: 30px !important;
-             font-size: 1em;
-             margin-bottom: 10px;
-             border: 1px solid #ffffff;
-             border-bottom: 0px !important;
-             box-shadow: none !important;
-         }
-     
-         .signup-col {
-           margin: 0px 16px 0px 16px;
-           padding-bottom: 20px;
-         }
-     
-         .item-inner {
-           border-bottom-color: #ffffff !important;
-           box-shadow: none !important;
-         }
-     
-         .submit-btn {
-            background: color($colors, secondary);
-           padding: 20px;
-           color: color($colors, dark);
-        //    border-radius: 30px !important;
-           //border: 1px solid #ffffff;
-         }
-     
-         .register-btn {
-           color: #ffffff;
-           font-size: 0.8em;
-         }
-      }
-
       .item-md ion-icon[item-start] + .item-inner{
-          margin-left: 0px
+          margin-left: 0px;
       }
+      .item > ion-icon{
+        font-size: 2.2rem
+      }
+      
 
       .grey{
           color: #9da5b3
@@ -63,9 +14,12 @@ page-home {
           color: #fff
       }
       ion-select{
-          width: 90%;
+          width: 100%;
           max-width: 100%;
-      }
+          background: color($colors, third);
+          color: #fff;
+      } 
+      // .select-md
 
       .list-md[inset]{
         margin: 0px;
@@ -89,9 +43,49 @@ page-home {
 
       .item-block{
         height: 4.0rem;
+        margin-bottom: 10px;
       }
 
       .no-margin{
         margin: 0px !important;
       }
+
+      .no-padding{
+        padding: 0px
+      }
+
+   .small-title{
+     color: #fff;
+     font-weight: 700;
+     font-size: 14px;
+     text-align: center
+   }
+
+   ion-item {
+    padding-left: 10px !important;
+      font-size: 1em;
+      border: 1px solid #ffffff;
+      border-bottom: 0px !important;
+      box-shadow: none !important;
+      background-color: color($colors, third) !important;
+  }
+
+  .list-md .item-block .item-inner{
+    border-bottom: 0px
+  }
+  .item-md{
+    font-size: 1.5rem
+  }
+  .select-md .select-icon .select-icon-inner{
+    color: #fff;
+  }
+
+  .button-primary{
+    border-radius: 5px;
+    box-shadow: none;
+    font-weight: 700;
+    text-transform: capitalize;
+    height: 5rem;
+    font-size: 17px
+  }
 }

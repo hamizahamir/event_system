@@ -32,6 +32,10 @@
       font-weight: 500;
       
     }
+
+    .button-primary{
+      background:  color($colors, secondary);
+    }
   
     .content-md,.card-md p{
       color: color($colors, dark);
@@ -46,7 +50,7 @@
     }
   
   .bg-primary{
-     background: color($colors,secondary);
+     background: color($colors,primary);
   }
   
   h4 {
