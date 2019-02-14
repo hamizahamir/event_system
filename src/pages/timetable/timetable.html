@@ -1,11 +1,34 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Timetable
+        Timetable
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <ion-grid class="no-padding ">
+    <ion-item>
+      Origin
+      <ion-badge item-end color="secondary">{{ origin }}</ion-badge>
+    </ion-item>
+    <ion-item>
+      Destination
+      <ion-badge item-end color="secondary">{{ destination }}</ion-badge>
+    </ion-item>
+  </ion-grid>
+  <ion-grid class="no-padding">
+    <ion-row class="row-header">
+      <ion-col col-6 class="text-left">Arrival</ion-col>
+      <ion-col col-6 class="text-right">Train Num</ion-col>
+    </ion-row>
+    <!-- <ion-row class="border-bottom" *ngFor="let item of data">
+          <ion-col col-2><img src="{{item.img}}" /> {{ item.state_name }} </ion-col>
+          <ion-col col-2 class="text-center">{{ item.harga_skrap }} </ion-col>
+          <ion-col col-2 class="text-center">{{ item.harga_1 }} </ion-col>
+          <ion-col col-2 class="text-center">{{ item.harga_3 }} </ion-col>
+          <ion-col col-2 class="text-center">{{ item.harga_7 }} </ion-col>
+          <ion-col col-2 class="text-center">{{ item.smr20_price }} </ion-col>
+      </ion-row> -->
+  </ion-grid>
 </ion-content>

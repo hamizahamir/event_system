@@ -17,6 +17,10 @@
 .right{
     float: right;
   }
+
+  .no-padding{
+    padding: 0px;
+  }
   .tabs-md .tabbar{
       // background: color($colors, light);
       padding-bottom: 4px;
@@ -33,10 +37,27 @@
       
     }
 
-    .button-primary{
+    .button-primary,.button-md:hover:not(.disable-hover){
       background:  color($colors, secondary);
     }
-  
+
+    .button-yellow,.button-md.button-yellow:hover:not(.disable-hover){
+      background: #ffdd57;
+    }
+
+    .text-center{
+      text-align: center
+    }
+
+    .text-left{
+      text-align: left
+    }
+
+    .text-right{
+      text-align: right
+    }
+
+
     .content-md,.card-md p{
       color: color($colors, dark);
       font-size: 14px;

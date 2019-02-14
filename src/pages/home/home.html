@@ -3,7 +3,7 @@
   <ion-grid class="no-padding bg-primary">
    
     <p class="small-title">Journey Planner</p>
-    <ion-row style="padding: 0px 20px 10px;">
+    <ion-row style="padding: 0px 11px 10px">
       <ion-col>
         <ion-list inset>
 
@@ -33,25 +33,29 @@
   </ion-grid>
   <ion-row>
     <ion-col style="padding: 2px 13px;">
-      <button ion-button full class="button-primary"><ion-icon name="ios-subway" item-start style="font-size:2.3rem;margin-right:10px"></ion-icon> Search</button>
+      <button ion-button full class="button-primary" (click)="search()"><ion-icon name="ios-subway" item-start style="font-size:2.3rem;margin-right:10px"></ion-icon> Search</button>
     </ion-col>
   </ion-row>
+  <ion-row>
+      <ion-col style="padding: 2px 13px;">
+        <button ion-button full class="button-yellow" (click)="timetable()"><ion-icon name="md-calendar" item-start style="font-size:2.3rem;margin-right:10px"></ion-icon> Timetable</button>
+      </ion-col>
+    </ion-row>
 
   <ion-row>
     <ion-col>
-      <ion-slides pager>
-
-        <ion-slide>
+      <ion-slides pager autoplay="10000" loop="true" pager="true"> 
+          <ion-slide >
+              <img src="http://intranet4.ktmb.com.my/ktmb/uploads/files/komuter_banner_small.jpg" />
+          </ion-slide>
+          <ion-slide>
+              <img src="http://intranet4.ktmb.com.my/ktmb/uploads/files/ktm_holiday_small_banner.jpg" />
+          </ion-slide>
+        <!-- <ion-slide>
           <img src="http://www.utusan.com.my/polopoly_fs/1.791561.1542811073!/image/image.jpeg_gen/derivatives/landscape_620/image.jpeg" />
-        </ion-slide>
+        </ion-slide> -->
 
-        <ion-slide style="background-color: blue">
-          <h2>Slide 2</h2>
-        </ion-slide>
-
-        <ion-slide style="background-color: red">
-          <h2>Slide 3</h2>
-        </ion-slide>
+       
 
       </ion-slides>
     </ion-col>

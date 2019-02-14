@@ -1,3 +1,24 @@
 page-timetable {
+    .item-inner{ padding-left: 15px }
 
+    .item-md{ padding-left: 0px }
+
+    ion-label{ font-size:1.5rem;}
+
+    .label-md{ margin:10px 8px 10px 0; }
+
+    .row-header {
+        background: #67809F;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .item-block{ min-height: 4rem;}
+
+    .item-md.item-block .item-inner{ border-bottom: 0px}
+
+    ion-item {
+          background-color: color($colors, third) !important;
+          color: #fff !important;
+      }
 }

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, OnInit,ViewChild } from '@angular/core';
+import { NavController,ToastController,App } from 'ionic-angular';
 import { MainPage } from '../../pages/main/main';
+import { TimetablePage } from '../../pages/timetable/timetable';
 import { HomeService } from '../../providers/home-service';
 
 @Component({
@@ -8,7 +9,6 @@ import { HomeService } from '../../providers/home-service';
   templateUrl: 'home.html'
 })
 export class HomePage implements OnInit {
-
   public servicesList : any[];
   public originList : any[];
   public destinationList : any[];
@@ -18,7 +18,10 @@ export class HomePage implements OnInit {
   public destination:any;
   public service:any;
 
-  constructor(public navCtrl: NavController, private homeService: HomeService) {
+  constructor(public navCtrl: NavController, 
+              private homeService: HomeService,
+              private toastCtrl: ToastController,
+              public app: App) {
 
   }
 
@@ -32,7 +35,6 @@ export class HomePage implements OnInit {
 
   getServices() {
     this.homeService.getServices().subscribe(result => {
-      console.log(JSON.parse(result));
       this.servicesList = JSON.parse(result);
     });
   }
@@ -40,7 +42,6 @@ export class HomePage implements OnInit {
   getOrigin(service:string){
     this.showDestination = false;
     this.homeService.getOrigin(service).subscribe(result => {
-      console.log(JSON.parse(result));
       this.originList =JSON.parse(result);
       this.showOrigin = true;
     });
@@ -50,9 +51,38 @@ export class HomePage implements OnInit {
   getDestination(origin:string){
      //success = true showDestination 
      this.homeService.getDestination(origin).subscribe(result => {
-      console.log(JSON.parse(result));
       this.destinationList =JSON.parse(result);
       this.showDestination = true;
     });
+  }
+
+  search(){
+
+  }
+
+  timetable(){
+    if(!this.origin || !this.destination){
+      let toast = this.toastCtrl.create({
+        message: 'Please select origin and destination',
+        duration: 3000,
+        position: 'bottom'
+      });
+    
+      toast.onDidDismiss(() => {
+        console.log('Dismissed toast');
+      });
+    
+      toast.present();
+    }else{
+      var item_dest = this.destinationList.find(item => item['STOP_CODE'] === this.destination);
+      var item_origin = this.originList.find(item => item['STOP_CODE'] === this.origin);
+      
+      this.app.getRootNav().push(TimetablePage,{
+        origin: item_origin.STOP_NAME,
+        destinationId: this.destination,
+        destinationName : item_dest.STOP_NAME
+      });
+      
+    }
   }
 }

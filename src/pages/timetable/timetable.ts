@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-timetable',
@@ -7,8 +7,15 @@ import { NavController } from 'ionic-angular';
 })
 export class TimetablePage {
 
-  constructor(public navCtrl: NavController) {
+  public origin :any;
+  public destination :any;
 
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams) {
+      this.origin = this.navParams.get('origin');
+      this.destination = this.navParams.get('destinationName');
+      console.log(this.destination);          
+    
   }
 
 }

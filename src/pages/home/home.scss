@@ -20,9 +20,6 @@ page-home {
           color: #fff;
       } 
 
-      .button-md:hover:not(.disable-hover){
-        background: color($colors, secondary);
-      }
       // .select-md
 
       .list-md[inset]{
@@ -58,40 +55,40 @@ page-home {
         padding: 0px
       }
 
-   .small-title{
-     color: #fff;
-     font-weight: 700;
-     font-size: 14px;
-     text-align: center
-   }
+    .small-title{
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center
+    }
 
-   ion-item {
-    padding-left: 10px !important;
-      font-size: 1em;
-      border: 1px solid #ffffff;
-      border-bottom: 0px !important;
-      box-shadow: none !important;
-      background-color: color($colors, third) !important;
-  }
+    ion-item {
+      padding-left: 10px !important;
+        font-size: 1em;
+        border: 1px solid #ffffff;
+        border-bottom: 0px !important;
+        box-shadow: none !important;
+        background-color: color($colors, third) !important;
+    }
 
-  .list-md .item-block .item-inner{
-    border-bottom: 0px
-  }
-  .item-md{
-    font-size: 1.5rem
-  }
-  .select-md .select-icon .select-icon-inner{
-    color: #fff;
-  }
+    .list-md .item-block .item-inner{
+      border-bottom: 0px
+    }
+    .item-md{
+      font-size: 1.5rem
+    }
+    .select-md .select-icon .select-icon-inner{
+      color: #fff;
+    }
 
-  .button-primary{
-    border-radius: 3px;
-    box-shadow: none;
-    font-weight: 700;
-    text-transform: capitalize;
-    height: 5rem;
-    font-size: 17px
-  }
+    .button-primary,.button-yellow{
+      border-radius: 3px;
+      box-shadow: none;
+      font-weight: 700;
+      text-transform: capitalize;
+      height: 5rem;
+      font-size: 17px
+    }
 
-  .select-md .select-placeholder{ color: #fff; }
+    .select-md .select-placeholder{ color: #fff; }
 }
