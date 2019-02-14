@@ -1,1 +1,1 @@
-export let SERVER_URL = "https://www.risda.gov.my/harga_public_search/";
+export let SERVER_URL = "http://47.254.213.69:8080/";

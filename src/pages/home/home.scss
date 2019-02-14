@@ -19,6 +19,10 @@ page-home {
           background: color($colors, third);
           color: #fff;
       } 
+
+      .button-md:hover:not(.disable-hover){
+        background: color($colors, secondary);
+      }
       // .select-md
 
       .list-md[inset]{
@@ -81,11 +85,13 @@ page-home {
   }
 
   .button-primary{
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: none;
     font-weight: 700;
     text-transform: capitalize;
     height: 5rem;
     font-size: 17px
   }
+
+  .select-md .select-placeholder{ color: #fff; }
 }

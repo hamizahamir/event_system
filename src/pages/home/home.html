@@ -9,39 +9,22 @@
 
           <ion-item>
             <ion-icon name="list" item-start class="white"></ion-icon>
-            <ion-select interface="popover">
-              <ion-option value="" selected="true">Services</ion-option>
-              <ion-option value="nes">NES</ion-option>
-              <ion-option value="n64">Nintendo64</ion-option>
-              <ion-option value="ps">PlayStation</ion-option>
-              <ion-option value="genesis">Sega Genesis</ion-option>
-              <ion-option value="saturn">Sega Saturn</ion-option>
-              <ion-option value="snes">SNES</ion-option>
+            <ion-select interface="popover" placeholder="Service" [(ngModel)]="service" (ionChange)="getOrigin($event)">
+              <ion-option *ngFor="let item of servicesList" [value]="item.SERVICE_NAME" (ionSelect)="getOrigin(item.SERVICE_NAME)">{{item.SERVICE_NAME}}</ion-option>
             </ion-select>
           </ion-item>
 
           <ion-item>
             <ion-icon name="ios-pin-outline" item-start class="white"></ion-icon>
-            <ion-select interface="popover">
-              <ion-option value="" selected="true">Origin</ion-option>
-              <ion-option value="nes">NES</ion-option>
-              <ion-option value="n64">Nintendo64</ion-option>
-              <ion-option value="ps">PlayStation</ion-option>
-              <ion-option value="genesis">Sega Genesis</ion-option>
-              <ion-option value="saturn">Sega Saturn</ion-option>
-              <ion-option value="snes">SNES</ion-option>
+            <ion-select interface="popover" [disabled]="!showOrigin" placeholder="Origin" [(ngModel)]="origin">
+                <ion-option *ngFor="let item of originList" [value]="item.STOP_CODE" (ionSelect)="getDestination(item.STOP_CODE)">{{item.STOP_NAME}}</ion-option>
             </ion-select>
           </ion-item>
+
           <ion-item class="no-margin">
             <ion-icon name="ios-pin-outline" item-start class="white"></ion-icon>
-            <ion-select interface="popover">
-              <ion-option value="" selected="true">Destination</ion-option>
-              <ion-option value="nes">NES</ion-option>
-              <ion-option value="n64">Nintendo64</ion-option>
-              <ion-option value="ps">PlayStation</ion-option>
-              <ion-option value="genesis">Sega Genesis</ion-option>
-              <ion-option value="saturn">Sega Saturn</ion-option>
-              <ion-option value="snes">SNES</ion-option>
+            <ion-select interface="popover" [disabled]="!showDestination" placeholder="Destination" [(ngModel)]="destination">
+                <ion-option *ngFor="let item of destinationList" [value]="item.STOP_CODE" >{{item.STOP_NAME}}</ion-option>
             </ion-select>
           </ion-item>
         </ion-list>
@@ -50,7 +33,7 @@
   </ion-grid>
   <ion-row>
     <ion-col style="padding: 2px 13px;">
-      <button ion-button full class="button-primary">Search</button>
+      <button ion-button full class="button-primary"><ion-icon name="ios-subway" item-start style="font-size:2.3rem;margin-right:10px"></ion-icon> Search</button>
     </ion-col>
   </ion-row>
 
