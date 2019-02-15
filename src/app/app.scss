@@ -14,6 +14,9 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+html{
+  font-size: 70%;
+}
 .right{
     float: right;
   }
@@ -37,6 +40,7 @@
       font-family: "Varela Round"; 
       line-height: 1.4;
       letter-spacing: .2px;
+      //#575962 -color
       
     }
 
@@ -52,8 +56,11 @@
     }
 
     .button-yellow,.button-md.button-yellow:hover:not(.disable-hover){
-      background: #ffdd57;
+      background:  color($colors,  dark-yellow);
+      color: #052453
     }
+
+    .bg{ background: #f3f4f9}
 
     .text-center{
       text-align: center
