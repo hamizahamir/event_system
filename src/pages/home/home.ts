@@ -3,6 +3,7 @@ import { NavController,ToastController,App } from 'ionic-angular';
 import { MainPage } from '../../pages/main/main';
 import { TimetablePage } from '../../pages/timetable/timetable';
 import { HomeService } from '../../providers/home-service';
+import { MainService } from '../../providers/main-service';
 
 @Component({
   selector: 'page-home',
@@ -20,6 +21,7 @@ export class HomePage implements OnInit {
 
   constructor(public navCtrl: NavController, 
               private homeService: HomeService,
+              private mainService: MainService,
               private toastCtrl: ToastController,
               public app: App) {
 
@@ -61,6 +63,9 @@ export class HomePage implements OnInit {
   }
 
   search(){
+    // this.mainService.search().subscribe(result => {
+    //   console.log(JSON.parse(result));
+    // });
 
   }
 

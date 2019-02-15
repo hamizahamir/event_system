@@ -14,6 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 //services
 import { HomeService } from "../providers/home-service";
+import { MainService } from "../providers/main-service";
 
 import { TimelineComponent } from '../pages/timeline/timeline';
 import { TimelineTimeComponent } from '../pages/timeline/timeline';
@@ -47,6 +48,7 @@ import { TimelineItemComponent } from '../pages/timeline/timeline';
   ],
   providers: [
     HomeService,
+    MainService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

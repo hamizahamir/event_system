@@ -1,6 +1,6 @@
 {
   "name": "ktm",
-  "app_id": "",
+  "app_id": "2c5e9ccf",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
