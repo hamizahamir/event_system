@@ -58,7 +58,7 @@ page-home {
     .small-title{
       color: #fff;
       font-weight: 700;
-      font-size: 14px;
+      // font-size: 14px;
       text-align: center
     }
 
@@ -70,6 +70,8 @@ page-home {
         box-shadow: none !important;
         background-color: color($colors, third) !important;
     }
+
+    // .item-md{ color: rgba(60, 60, 60, 0.7); }
 
     .list-md .item-block .item-inner{
       border-bottom: 0px

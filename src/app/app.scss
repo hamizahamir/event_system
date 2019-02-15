@@ -31,10 +31,20 @@
     padding:16px;
   }
   
-  body,.toolbar-title-md, .label-md, .tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text, .content-md{
-      font-family: "Open Sans", sans-serif;
-      font-weight: 500;
+  body,.toolbar-title-md, .label-md, .content-md,.toast-message{
+      // font-family: "Open Sans", sans-serif;
+      // font-family: Circular,Helvetica,Arial,sans-serif;
+      font-family: "Varela Round"; 
+      line-height: 1.4;
+      letter-spacing: .2px;
       
+    }
+
+    .tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text{
+      font-family: "Varela Round"; 
+      font-size: 13px;
+      line-height: 1.4;
+      letter-spacing: .2px;
     }
 
     .button-primary,.button-md:hover:not(.disable-hover){

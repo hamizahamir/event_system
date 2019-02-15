@@ -36,6 +36,10 @@ export class HomePage implements OnInit {
   getServices() {
     this.homeService.getServices().subscribe(result => {
       this.servicesList = JSON.parse(result);
+      this.servicesList.forEach(data => {
+        // data.SERVICE_NAME.toLowerCase();
+      });
+      console.log(this.servicesList);
     });
   }
 
@@ -85,4 +89,6 @@ export class HomePage implements OnInit {
       
     }
   }
+
+  
 }

@@ -10,21 +10,21 @@
           <ion-item>
             <ion-icon name="list" item-start class="white"></ion-icon>
             <ion-select interface="popover" placeholder="Service" [(ngModel)]="service" (ionChange)="getOrigin($event)">
-              <ion-option *ngFor="let item of servicesList" [value]="item.SERVICE_NAME" (ionSelect)="getOrigin(item.SERVICE_NAME)">{{item.SERVICE_NAME}}</ion-option>
+              <ion-option *ngFor="let item of servicesList" [value]="item.SERVICE_NAME" (ionSelect)="getOrigin(item.SERVICE_NAME)">{{item.SERVICE_NAME | titlecase}}</ion-option>
             </ion-select>
           </ion-item>
 
           <ion-item>
             <ion-icon name="ios-pin-outline" item-start class="white"></ion-icon>
             <ion-select interface="popover" [disabled]="!showOrigin" placeholder="Origin" [(ngModel)]="origin">
-                <ion-option *ngFor="let item of originList" [value]="item.STOP_CODE" (ionSelect)="getDestination(item.STOP_CODE)">{{item.STOP_NAME}}</ion-option>
+                <ion-option *ngFor="let item of originList" [value]="item.STOP_CODE" (ionSelect)="getDestination(item.STOP_CODE)">{{item.STOP_NAME | titlecase}}</ion-option>
             </ion-select>
           </ion-item>
 
           <ion-item class="no-margin">
             <ion-icon name="ios-pin-outline" item-start class="white"></ion-icon>
             <ion-select interface="popover" [disabled]="!showDestination" placeholder="Destination" [(ngModel)]="destination">
-                <ion-option *ngFor="let item of destinationList" [value]="item.STOP_CODE" >{{item.STOP_NAME}}</ion-option>
+                <ion-option *ngFor="let item of destinationList" [value]="item.STOP_CODE" >{{item.STOP_NAME | titlecase}}</ion-option>
             </ion-select>
           </ion-item>
         </ion-list>
